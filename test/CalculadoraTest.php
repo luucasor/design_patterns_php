@@ -1,13 +1,18 @@
 <?php
 
+require_once("../Orcamento.php");
+require_once("../Imposto.php");
+require_once("../ICMS.php");
+require_once("../CalculadoraDeImpostos.php");
+
   class CalculadoraTest extends PHPUnit_Framework_TestCase{
 
     public function testCalculoDeImpostoICMS(){
-      $orcamento = new Orcamento(500);
+      $consulta = new Orcamento(500);
       $imposto = new ICMS();
       $calculadora = new CalculadoraDeImpostos();
 
-      $this->assertEquals(50, $calculadora->calcula($orcamento, $imposto));
+      $this->assertEquals(75, $calculadora->calcula($consulta, $imposto));
     }
   }
 ?>

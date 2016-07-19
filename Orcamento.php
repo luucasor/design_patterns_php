@@ -1,13 +1,14 @@
 <?php
-  class Orcamento{
-    private valor;
+class Orcamento{
 
-    function __construct($valor){
+    private $valor;
+
+    function Orcamento($valor){
       $this->valor = $valor;
     }
 
     public function getValor() {
       return $this->valor;
     }
-  }
+}
 ?>

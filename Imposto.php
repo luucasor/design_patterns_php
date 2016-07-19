@@ -1,6 +1,7 @@
 <?php
+require_once("Orcamento.php");
 
-  interface Imposto{
+interface Imposto{
     function calcula(Orcamento $orcamento);
-  }
+}
 ?>
